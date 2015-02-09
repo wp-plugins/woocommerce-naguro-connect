@@ -1,0 +1,85 @@
+.naguro-design-areas {
+    padding: 10px 0;
+}
+
+.options_group .naguro-design-areas p {
+    padding: 0;
+    margin: 0;
+}
+
+.naguro-design-areas .button-primary {
+    /*margin-top: 12px;*/
+}
+
+#woocommerce_naguro_settings .button {
+    margin-right: 12px;
+}
+
+.naguro-design-areas-container {
+    margin: 12px 0;
+}
+
+.naguro-design-area {
+    border: 1px solid #DFDFDF;
+    margin: 0 0 24px 0;
+    padding: 12px 0;
+}
+
+.naguro-design-area .remove_row {
+    margin: 0;
+    float: right;
+}
+
+.naguro-design-areas-container-ghost {
+    display: none;
+}
+
+.options_group .naguro-design-areas p.naguro-upload-notice {
+    margin: 12px;
+    padding: 4px 12px;
+    border: 1px solid #DFDFDF;
+    font-style: italic;
+}
+
+.naguro-printable-product {
+    width: 100%;
+    height: 100%;
+}
+
+.naguro-printable-product img {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    margin: 5% auto;
+}
+
+.options_group .naguro-design-areas p.naguro-text-container {
+    margin: 5px 12px;
+}
+
+#woocommerce-product-data ul.wc-tabs li.naguro_options a:before {
+    content: " ";
+    width: 13px;
+    height: 13px;
+    background: url(../images/naguro-icon.svg);
+    background-size: 100% 100%;
+    float: left;
+    margin-top: 3px;
+    margin-right: 6px;
+}
+
+.woocommerce_options_panel .naguro-design-area .description {
+    display: block;
+    clear: left;
+    margin: 0;
+}
+
+.naguro-printable-area-save-button {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+
+.naguro-design-area .naguro-printable-product {
+    display: none;
+}
