@@ -5,4 +5,8 @@ class Naguro_Activate_Key_Request extends Naguro_Request {
 		$this->handler->handle_request( 'key/activate', $this->params, 'post' );
 		return $this->handler->get_data();
 	}
+
+	public function output() {
+		echo $this->do_request();
+	}
 }

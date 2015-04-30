@@ -22,6 +22,14 @@ class Naguro_WordPress_Settings_Init {
 			'naguro',
 			'naguro_dimensions'
 		);
+
+		add_settings_field(
+			'dpi',
+			'DPI',
+			array( $this, 'dimension_dpi_render' ),
+			'naguro',
+			'naguro_dimensions'
+		);
 	}
 
 	public function settings_section_callback() {
@@ -45,5 +53,11 @@ class Naguro_WordPress_Settings_Init {
 		}
 
 		echo '</select>';
+	}
+
+	public function dimension_dpi_render() {
+		$options = get_option( 'naguro_settings' );
+		$dpi = isset( $options['dpi'] ) ? intval( $options['dpi'] ) : 300;
+		echo '<input type="text" name="naguro_settings[dpi]" value="'.$dpi.'">';
 	}
 }

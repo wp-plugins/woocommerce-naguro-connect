@@ -15,8 +15,8 @@ class WordPress_API_Handler implements Naguro_API_Handler {
 		$this->api_url = apply_filters( 'wc_naguro_api_endpoint_url', 'https://api.naguro.com/api/v1/' );
 	}
 
-	public function handle_request( $endpoint, $params = array(), $type = 'post' ) {
-		$params = $this->setup_parameters( $params );
+	public function handle_request( $endpoint, $params = array(), $type = 'post', $request_params = array() ) {
+		$params = array_merge( $request_params, $this->setup_parameters( $params ) );
 		$url = $this->generate_api_endpoint_url( $endpoint );
 
 		if ( 'get' == $type ) {

@@ -15,10 +15,7 @@
 	},
 	"autoload": {
 		"classmap": [
-			"includes/admin",
-			"includes/core",
-			"includes/naguro",
-			"includes/wordpress"
+			"includes"
 		]
 	}
 }

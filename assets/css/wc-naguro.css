@@ -44,6 +44,7 @@
 .naguro-printable-product {
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 .naguro-printable-product img {
@@ -51,6 +52,14 @@
     max-width: 90%;
     max-height: 90%;
     margin: 5% auto;
+}
+
+.naguro-printable-product .overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
 .options_group .naguro-design-areas p.naguro-text-container {
@@ -81,5 +90,21 @@
 }
 
 .naguro-design-area .naguro-printable-product {
+    display: none;
+}
+
+.naguro-upload.opened .upload-file {
+    display: none;
+}
+
+.naguro-upload.opened .current-file {
+    display: block;
+}
+
+.naguro-upload.closed .upload-file {
+    display: block;
+}
+
+.naguro-upload.closed .current-file {
     display: none;
 }

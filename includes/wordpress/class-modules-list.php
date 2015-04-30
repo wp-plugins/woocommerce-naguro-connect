@@ -5,7 +5,7 @@ class Naguro_Modules_List extends WP_List_Table {
 		$columns = array(
 			'name' => 'Name',
 			'description' => 'Description',
-			'active' => 'Active',
+			'actions' => 'Actions',
 		);
 
 		return $columns;
@@ -24,10 +24,39 @@ class Naguro_Modules_List extends WP_List_Table {
 				return $item->name;
 			case 'description':
 				return $item->description;
-			case 'active':
-				return $item->active ? 'Yes' : 'No';
+			case 'actions':
+				return $this->get_actions( $item );
 			default:
 				return '';
+		}
+	}
+
+	/**
+	 * @return string
+	 */
+	private function get_actions( $item ) {
+		if ( $item->always_on ) {
+			return '';
+		}
+
+		if ( ! $item->unlocked ) {
+			$text = 'Get this module';
+
+			if ( ! empty( $item->purchase_url ) ) {
+				return '<a href="'.esc_url( $item->purchase_url ) . '">'. $text .'</a>';
+			}
+
+			return $text;
+		}
+
+		if ( ! $item->active ) {
+			$tab_link = '?page=woocommerce-naguro&tab=modules';
+			$activate_link = $tab_link . '&naguro-action=activate-module&naguro-module=' . $item->slug;
+			return '<a href="'.$activate_link.'">Activate this module</a>';
+		} else {
+			$tab_link = '?page=woocommerce-naguro&tab=modules';
+			$deactivate_link = $tab_link . '&naguro-action=deactivate-module&naguro-module=' . $item->slug;
+			return '<a href="'.$deactivate_link.'">Deactivate this module</a>';
 		}
 	}
 
