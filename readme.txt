@@ -2,8 +2,8 @@
 Contributors: radishconcepts
 Tags: ecommerce, e-commerce, commerce, woocommerce, product design, configuration, products
 Requires at least: 4.0
-Tested up to: 4.1
-Stable tag: 1.0.0
+Tested up to: 4.2.1
+Stable tag: 1.1.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -38,6 +38,11 @@ You can find extensive documentation on [how to install plugins](http://codex.wo
 == Screenshots ==
 
 == Changelog ==
+
+= 1.1.0 =
+* Support for modules to be installed via the new settings panel
+* Added overlay module
+* Better handling of editor file loading
 
 = 1.0.0 =
 * Initial release
