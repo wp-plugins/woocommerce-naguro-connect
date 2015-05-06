@@ -5,4 +5,8 @@ class Naguro_Request_Trial_Key_Request extends Naguro_Request {
 		$this->handler->handle_request( 'key/create-trial', $this->params, 'post' );
 		return $this->handler->get_data();
 	}
+
+	public function output() {
+		// This is just a stub method
+	}
 }
