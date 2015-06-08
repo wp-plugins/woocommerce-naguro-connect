@@ -1,0 +1,9 @@
+= 1.0.0-beta-5 =
+* Settings panel has been moved to the Integrations tab in WooCommerce settings
+* Dimensions unit for design area size is a new setting
+* Designable area sticks to ratio constraint set by print width and height
+* API endpoint URL is no longer a setting, but can be filtered using the 'wc_naguro_api_endpoint_url' filter
+* Size description is now automatically generated based on print width, height and dimension unit
+* Fixed jQuery error where in some cases the dependency wasn't properly loaded
+* Print width, height and dimension unit gets passed to API to render final design image in right size
+* Image upload and order preview now have a loading spinner image
