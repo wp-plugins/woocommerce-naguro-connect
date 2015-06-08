@@ -3,7 +3,7 @@
 /*
  * Plugin Name: WooCommerce Naguro Connect
  * Description: Connects your WooCommerce powered store to Naguro.
- * Version: 1.1.1
+ * Version: 1.1.2
  * Author: Radish Concepts
  * Author URI: http://radishconcepts.com
  */
